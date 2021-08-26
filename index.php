@@ -12,17 +12,25 @@
         <img src="img/icon.png" alt="Logo">
     </nav>
     <section>
+        <?php include "sql.php";?>
+        
         <div id="form">
             <div id="opciones">
                 <span id="labelOrigen">Ciudad de origen</span>
                 <select name="" id="inputOrigen">
-                    <option value="">1</option>
-                    <option value="">2</option>
+                    <?php
+                        foreach ($capital1 as $valor) {
+                           echo '<option value="'.$valor['capital1'].'">'.$valor['capital1'].'</option>';
+                        }
+                    ?>                    
                 </select>
                 <span id="labelDestino">Ciudad destino</span>
                 <select name="" id="inputDestino">
-                    <option value="">1</option>
-                    <option value="">2</option>
+                    <?php
+                        foreach ($capital1 as $valor) {
+                           echo '<option value="'.$valor['capital1'].'">'.$valor['capital1'].'</option>';
+                        }
+                    ?> 
                 </select> 
                 <span id="tituloDimenciones">Dimenciones del paquete</span>
 
