@@ -124,7 +124,10 @@ section #form #opciones{
 
 footer{
     height: 10vh;
-    background-color: blue;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

@@ -56,7 +56,7 @@
 
     </section>
     <footer>
-        <h1>Darynka Tapia</h1>
+        <h3>Desarrollado por Darynka Tapia ♥</h3>
     </footer>
 
     <script>
