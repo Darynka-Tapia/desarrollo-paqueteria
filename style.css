@@ -43,8 +43,20 @@ section #form{
     background: rgba(0, 0, 0, 0.5);
     display: flex;
 }
-/*section #form #opciones{}
-section #form #results{width: 38%; border: 1px solid blue; height: inherit;}*/
+/*section #form #opciones{}*/
+section #form #results{width: 38%; 
+    border: 1px solid black; 
+    height: inherit;
+    font-size: 18px;
+    font-family: cursive;
+    color: #fff;
+    background: rgba(0,0,0,0.6) !important;
+    padding: 10px;
+    display: none;
+    
+    transition: 0.5s;
+
+}
 
 #labelOrigen {grid-area: labelOrigen; font-size: 20px;}
 #inputOrigen{grid-area: inputOrigen;height: 30px;}
@@ -94,7 +106,7 @@ section #form #results{width: 38%; border: 1px solid blue; height: inherit;}*/
 section #form #opciones{
     font-family: monospace;
     color: #fff;
-    width: 98%;
+    width: 48%;
     height: inherit; 
     margin:10px;
     display: grid;
@@ -120,7 +132,13 @@ footer{
 
 
 @media (max-width:1200px){
-    
+    section{
+        height: auto;
+        padding:20px 0px;
+    }
+    section #form{
+        flex-direction: column;
+    }
     section #form #opciones{
         font-family: monospace;
         color: #fff;
@@ -138,6 +156,37 @@ footer{
         "inputLargo inputPeso"
         "botonCalcular .";
         grid-template-columns: repeat(2, 44%);
+        /*grid-template-rows: 20px auto 20px 20px auto 20px auto auto ; */
+        gap: 10px 20px;
+    }
+}
+
+@media (max-width:540px){
+    section #form #results{width: 98%; }
+    
+    section #form #opciones{
+        font-family: monospace;
+        color: #fff;
+        width: 100%;
+        height: inherit; 
+        margin:10px;
+        display: grid;
+        grid-template-areas: 
+        "labelOrigen"
+        "inputOrigen"
+        "labelDestino"
+        "inputDestino"
+        "tituloDimenciones"
+        "spanAlto "
+        "inputAlto "
+        "spanAncho"
+        "inputAncho"
+        "spanLargo "
+        "inputLargo"
+        "spanPeso"
+        "inputPeso"
+        "botonCalcular";
+        grid-template-columns: 98%;
         /*grid-template-rows: 20px auto 20px 20px auto 20px auto auto ; */
         gap: 10px 20px;
     }

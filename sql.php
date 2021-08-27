@@ -15,7 +15,10 @@
                 $capital1[$key] = $row ;
             }
         //}
-    }
+
+
+
+        }
         catch(PDOException $e){
             echo "<script>console.log('La conexión ha fallado:  " . $e->getMessage() . "' );</script>";
     }
